@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   as :user do
-    delete '/users/sign_out', to: 'devise/sessions#destroy', as: :logout
+    get '/users/sign_out', to: 'devise/sessions#destroy', as: :logout
   end
 
   get 'prototypes', to: 'prototypes#index'
